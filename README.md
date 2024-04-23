@@ -4,7 +4,7 @@ Github bruker: Even Zaw
 
 Github link til oblig 3: https://github.com/EvenZaw/DATA-1700-Oblig-3
 
-Youtube link: https://www.youtube.com/watch?v=DL5QRL_YLf4 
+Youtube link: https://www.youtube.com/watch?v=zvHVVrGOtvk
 
 Obligatorisk oppgave 3
 
