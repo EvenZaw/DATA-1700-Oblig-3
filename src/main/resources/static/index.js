@@ -93,24 +93,25 @@ function registrer() {
         isValid = false;
     }
     if (fornavn === "") {
-        document.getElementById("fornavnCheck").textContent = "Vennligst fyll ut fornavn";
+        document.getElementById("fornavnCheck").textContent = "Vennligst fyll ut Eornavn";
         isValid = false;
     }
 
     if (etternavn === "") {
-        document.getElementById("etternavnCheck").textContent = "Vennligst fyll ut etternavn";
+        document.getElementById("etternavnCheck").textContent = "Vennligst fyll ut Etternavn";
         isValid = false;
     }
 
     if (!/^[0-9]{8}$/.test(telefonnr)) {
-        document.getElementById("telefonnrCheck").textContent = "Skriv inn telefonnr";
+        document.getElementById("telefonnrCheck").textContent = "Skriv inn Telefonnr";
         isValid = false;
     }
 
     if (!/\S+@\S+.\S+/.test(epost)) {
-        document.getElementById("epostCheck").textContent = "Skriv inn en gyldig e-postadresse";
+        document.getElementById("epostCheck").textContent = "Skriv inn en gyldig E-postadresse";
         isValid = false;
     }
+
 
 
     if (isValid) {

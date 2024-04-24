@@ -17,7 +17,7 @@
                 <div class="form-group">
                     <label for="film">Film:</label>
                     <select id="film" class="form-control"><span id="filmCheck" style="color: red;"></span>
-                        <option value="velg film">Velg film</option>
+                        <option value="" disabled selected hidden>Velg film</option>
                         <option value="avengers ">Avengers</option>
                         <option value="the nun">The Nun</option>
                         <option value="shrek">Shrek</option>
@@ -38,11 +38,11 @@
                 </div>
                 <div class="form-group">
                     <label for="epost">E-post:</label>
-                    <input type="text" id="epost" class="form-control"><span id="epostCheck" style="color: red;"></span>
+                    <input type="text" id="epost" placeholder="eksempel@gmail.com" class="form-control"><span id="epostCheck" style="color: red;"></span>
                 </div>
                 <div class="form-group">
                     <label for="telefonnr">Telefon:</label>
-                    <input type="text" id="telefonnr" class="form-control"><span id="telefonnrCheck" style="color: red"></span>
+                    <input type="text" id="telefonnr" placeholder="12345678" class="form-control"><span id="telefonnrCheck" style="color: red"></span>
                 </div>
                 <div class="form-group">
                     <button class="btn btn-primary" onclick="registrer()">Registrer</button>

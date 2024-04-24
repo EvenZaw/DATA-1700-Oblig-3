@@ -20,7 +20,7 @@
         <div class="form-group">
           <label for="film">Film</label>
           <select id="film" class="form-control">
-            <option value="velg film">Velg film</option>
+            <option value="" disabled selected hidden>Velg film</option>
             <option value="avengers ">Avengers</option>
             <option value="the nun">The Nun</option>
             <option value="shrek">Shrek</option>
@@ -41,11 +41,11 @@
         </div>
         <div class="form-group">
           <label for="epost">E-post:</label>
-          <input type="text" id="epost" class="form-control">
+          <input type="text" id="epost" placeholder="eksempel@gmail.com" class="form-control">
         </div>
         <div class="form-group">
           <label for="telefonnr">Telefon:</label>
-          <input type="number" id="telefonnr" class="form-control">
+          <input type="number" id="telefonnr" placeholder="12345678" class="form-control">
         </div>
         <div class="form-group">
           <input type="button" value="Endre" class="btn btn-primary" onclick="endreKunden()"/>
