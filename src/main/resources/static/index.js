@@ -93,7 +93,7 @@ function registrer() {
         isValid = false;
     }
     if (fornavn === "") {
-        document.getElementById("fornavnCheck").textContent = "Vennligst fyll ut Eornavn";
+        document.getElementById("fornavnCheck").textContent = "Vennligst fyll ut Fornavn";
         isValid = false;
     }
 
