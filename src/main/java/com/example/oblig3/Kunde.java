@@ -7,14 +7,16 @@ public class Kunde {
     private String etternavn;
     private String telefonnr;
     private String epost;
+    private int id;
 
-    public Kunde(String fornavn, String etternavn, String telefonnr, String epost, String film, String antall) {
+    public Kunde(String fornavn, String etternavn, String telefonnr, String epost, String film, String antall, int id) {
         this.fornavn = fornavn;
         this.etternavn = etternavn;
         this.telefonnr = telefonnr;
         this.epost = epost;
         this.film = film;
         this.antall = antall;
+        this.id=id;
     }
 
     public String getFornavn() {
@@ -65,6 +67,14 @@ public class Kunde {
         this.antall = antall;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "Kunde{" +
@@ -74,6 +84,7 @@ public class Kunde {
                 ", etternavn='" + etternavn + '\'' +
                 ", telefonnr='" + telefonnr + '\'' +
                 ", epost='" + epost + '\'' +
+                ", id='" + id + '\'' +
                 '}';
     }
     public Kunde(){
