@@ -1,28 +1,8 @@
 
+$(function (){
+    hentAlle();
+});
 
-/*function  regKinoBilett() {
-    const kinobilett = {
-        film: $("#film").val(),
-        antall: $("#antall").val(),
-        fornavn: $("#fornavn").val(),
-        etternavn: $("#etternavn").val(),
-        telefonnr: $("#telefonnr").val(),
-        epost: $("#epost").val(),
-    };
-    $.post("/lagreKunde", kinobilett, function () {
-        hentAlle();
-    });
-    $("#film").val("");
-    $("#antall").val("");
-    $("#fornavn").val("");
-    $("#etternavn").val("");
-    $("#telefonnr").val("");
-    $("#epost").val("");
-    $("#film").val("")
-
-
-}
-*/
 
 function hentAlle(){
     $.get("/visAlle", function (data){
@@ -47,11 +27,22 @@ function formaterData(kunder) {
             "<td>" + kunde.epost + "</td>" +
             "<td>" + kunde.film + "</td>" +
             "<td>" + kunde.antall + "</td>" +
+            "<td> <a class='btn btn-primary' href='endreKunde.html?id="+kunde.id+"'>Endre</a></td>" +
+            "<td> <button class = 'btn btn-danger' onclick='slettEnKunde("+kunde.id+")'>Slett</button> </td>" +
             "</tr>";
     }
     ut += "</table>";
     $("#kundene").html(ut);
 }
+
+function slettEnKunde(id) {
+    console.log("Slett kunde med ID:", id);
+    const url = "/slettEnKunde?id=" + id;
+    $.get(url, function () {
+        console.log("Kunde slettet");
+        window.location.href = "/";
+    });
+};
 function hentAlleFilmer(){
     $.get("hentFilmer", function (filmer){
         formaterFilmer(filmer);
@@ -73,7 +64,7 @@ function  slettAlle(){
 
 // Validation
 function registrer() {
-    
+
     $("#antallCheck").html("");
     $("#fornavnCheck").html("");
     $("#etternavnCheck").html("");
@@ -105,7 +96,7 @@ function registrer() {
         document.getElementById("fornavnCheck").textContent = "Vennligst fyll ut fornavn";
         isValid = false;
     }
-      
+
     if (etternavn === "") {
         document.getElementById("etternavnCheck").textContent = "Vennligst fyll ut etternavn";
         isValid = false;
@@ -134,7 +125,7 @@ function registrer() {
 
         $.post("lagreKunde", buy, function (){
             hentAlle();
-                           
+
         })
         document.getElementById("film").value = "";
         document.getElementById("antall").value = "";

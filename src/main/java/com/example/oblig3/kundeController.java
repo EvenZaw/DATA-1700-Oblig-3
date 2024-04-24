@@ -29,6 +29,7 @@ public class kundeController {
         rep.slettKunde();
     }
 
+
     @GetMapping("hentFilmer")
     public List<film> hentFilmer(){
         List<film> listFilmer = new ArrayList<>();
@@ -38,7 +39,18 @@ public class kundeController {
         listFilmer.add(new film("Forest Gump"));
         return listFilmer;
     }
-    
 
+    @PostMapping("/endreEnKunde")
+    public void endreEnKunde(Kunde kunde){
+        rep.endreEnKunde(kunde);
+    }
+    @GetMapping("/hentEnKunde")
+    public Kunde hentEnKunde(int id){
+        return rep.hentEnKunde(id);
+    }
 
+    @GetMapping("/slettEnKunde")
+    public void slettEnKunde(int id){
+        rep.slettEnKunde(id);
+    }
 }
