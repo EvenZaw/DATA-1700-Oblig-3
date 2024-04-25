@@ -35,6 +35,7 @@ function formaterData(kunder) {
     $("#kundene").html(ut);
 }
 
+// sletter en og en kunde
 function slettEnKunde(id) {
     console.log("Slett kunde med ID:", id);
     const url = "/slettEnKunde?id=" + id;
@@ -56,13 +57,15 @@ function formaterFilmer(filmer){
     ut+="</select>";
     $("#film").html(ut);
 }
+
+//sletter alle registrerte kunder
 function  slettAlle(){
     $.get("/slettKunde", function (){
         hentAlle();
     })
 }
 
-// Validation
+// Validerer og registrerer
 function registrer() {
 
     $("#antallCheck").html("");
